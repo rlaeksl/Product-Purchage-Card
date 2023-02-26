@@ -4,9 +4,135 @@ main {
 
 .viewport {
   width: clamp(320px, 100vw, 800px);
-  border: 1px solid red;
+}
+
+/*product-info*/
+.product-info {
+  padding-bottom: 16px;
 }
 
 .product-img {
   width: 100%;
+  margin-bottom: 16px;
+}
+
+.product-title {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 16px;
+}
+
+.price-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-discount {
+  font-size: 24px;
+  color: #6b90dc;
+  font-weight: 700;
+}
+
+.product-price {
+  font-size: 22px;
+  color: #333333;
+  font-weight: 400;
+}
+
+.product-original-price {
+  font-size: 16px;
+  color: #999999;
+  font-weight: 700;
+  text-decoration: line-through;
+  margin-right: 10px;
+  position: relative;
+  bottom: 2px;
+}
+
+/*product-delivery-charge*/
+.product-delivery-charge {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid #dee0e3;
+  border-bottom: 1px solid #dee0e3;
+}
+
+.product-delivery-parcel {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.product-delivery-parcel::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 1px;
+  height: 12px;
+  top: 1px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #dee0e3;
+}
+
+.product-delivery-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #333333;
+  margin-right: 3px;
+}
+
+.product-delivery-payment-method {
+  font-size: 14px;
+  color: #6b90dc;
+  font-weight: 700;
+}
+
+.product-delivery-count-method {
+  font-size: 14px;
+  color: #999999;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+/* product-quantity */
+.product-quantity {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #dee0e3;
+}
+
+.product-qunatity-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 110px;
+  border: 1px solid #dee0e3;
+  text-align: center;
+}
+.product-quantity-minus,
+.product-quantity-plus {
+  background-color: #f1f2f4;
+  border: none;
+  height: 34px;
+  flex-grow: 1;
+  cursor: pointer;
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.product-quantity-number {
+  flex-grow: 1;
+  font-size: 16px;
+  color: #333333;
+  font-weight: 400;
+}
+
+/*product-purchase-wrap*/
+.product-purchase-wrap {
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
