@@ -1,0 +1,12 @@
+main {
+  padding: 16px;
+}
+
+.viewport {
+  width: clamp(320px, 100vw, 800px);
+  border: 1px solid red;
+}
+
+.product-img {
+  width: 100%;
+}
