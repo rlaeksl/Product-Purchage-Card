@@ -173,6 +173,7 @@ main {
 }
 
 .product-purchase-button {
+  display: flex;
   background-color: #03c75a;
   border-radius: 6px;
   width: 100%;
@@ -183,4 +184,13 @@ main {
   color: #ffffff;
   height: 48px;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-purchase-button-img {
+  background-image: url('./../assets/IconNaver.png');
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
 }

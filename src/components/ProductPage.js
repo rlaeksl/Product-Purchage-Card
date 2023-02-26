@@ -3,14 +3,14 @@ import { useState } from 'react';
 import './../style/productPage.css';
 
 const ProductPage = () => {
-  const [add, setAdd] = useState(1);
+  const [add, setAdd] = useState(0);
   const totalPrice = add * 6370;
 
   const handlePlus = () => {
     setAdd(add + 1);
   };
   const handleMinus = () => {
-    add === 1 ? 1 : setAdd(add - 1);
+    add === 0 ? 1 : setAdd(add - 1);
   };
 
   return (
@@ -55,7 +55,10 @@ const ProductPage = () => {
           {totalPrice}원
         </p>
       </div>
-      <button className="product-purchase-button">구매하기</button>
+      <button className="product-purchase-button">
+        <div className="product-purchase-button-img"></div>
+        <p>구매하기</p>
+      </button>
     </main>
   );
 };
