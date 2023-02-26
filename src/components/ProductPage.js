@@ -49,13 +49,13 @@ const ProductPage = () => {
         </div>
       </div>
       <div className="product-purchase-wrap">
-        <p>총 상품 금액</p>
-        <p>
-          <span>총 수량 {add}개</span>
+        <p className="product-total-title">총 상품 금액</p>
+        <p className="product-total-price">
+          <span className="product-total-quantity">총 수량 {add}개</span>
           {totalPrice}원
         </p>
       </div>
-      <button>구매하기</button>
+      <button className="product-purchase-button">구매하기</button>
     </main>
   );
 };
