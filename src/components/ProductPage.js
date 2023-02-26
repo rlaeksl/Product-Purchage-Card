@@ -1,7 +1,18 @@
 import React from 'react';
+import { useState } from 'react';
 import './../style/productPage.css';
 
 const ProductPage = () => {
+  const [add, setAdd] = useState(1);
+  const totalPrice = add * 6370;
+
+  const handlePlus = () => {
+    setAdd(add + 1);
+  };
+  const handleMinus = () => {
+    add === 1 ? 1 : setAdd(add - 1);
+  };
+
   return (
     <main>
       <div className="product-info">
@@ -28,15 +39,20 @@ const ProductPage = () => {
       </div>
       <div className="product-quantity">
         <div className="product-qunatity-button">
-          <button className="product-quantity-minus">-</button>
-          <div className="product-quantity-number">1</div>
-          <button className="product-quantity-plus">+</button>
+          <button className="product-quantity-minus" onClick={handleMinus}>
+            -
+          </button>
+          <div className="product-quantity-number">{add}</div>
+          <button className="product-quantity-plus" onClick={handlePlus}>
+            +
+          </button>
         </div>
       </div>
       <div className="product-purchase-wrap">
         <p>총 상품 금액</p>
         <p>
-          <span>총 수량 1개</span>6,370원
+          <span>총 수량 {add}개</span>
+          {totalPrice}원
         </p>
       </div>
       <button>구매하기</button>
